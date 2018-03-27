@@ -30,6 +30,9 @@ public class Personaje {
 	@ManyToOne
 	private Raza raza;
 	
+	@ManyToOne
+	public Alineamiento alineamiento;
+	
 	public Long getId() {
 		return id;
 	}
@@ -71,6 +74,12 @@ public class Personaje {
 	}
 	public void setNombreJugador(String nombreJugador) {
 		this.nombreJugador = nombreJugador;
+	}
+	public Alineamiento getAlineamiento() {
+		return alineamiento;
+	}
+	public void setAlineamiento(Alineamiento alineamiento) {
+		this.alineamiento = alineamiento;
 	}
 	
 }
