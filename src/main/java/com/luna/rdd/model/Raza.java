@@ -21,11 +21,11 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "clases")
+@Table(name = "razas")
 @EntityListeners(AuditingEntityListener.class)
 @JsonIgnoreProperties(value = {"createdAt", "updatedAt"}, 
         allowGetters = true)
-public class Clase implements Serializable{
+public class Raza implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 

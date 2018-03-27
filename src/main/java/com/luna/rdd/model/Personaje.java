@@ -14,15 +14,28 @@ public class Personaje {
     @GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	
+	@NotBlank
 	private String nombre;
 	private String descripcion;
+	
+	@NotBlank
+	private String nombreJugador;
 	
 	@NotBlank
 	private Long nivel;
 	
 	@ManyToOne
 	private Clase clase;
+
+	@ManyToOne
+	private Raza raza;
 	
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public String getNombre() {
 		return nombre;
 	}
@@ -46,6 +59,18 @@ public class Personaje {
 	}
 	public void setClase(Clase clase) {
 		this.clase = clase;
+	}
+	public Raza getRaza() {
+		return raza;
+	}
+	public void setRaza(Raza raza) {
+		this.raza = raza;
+	}
+	public String getNombreJugador() {
+		return nombreJugador;
+	}
+	public void setNombreJugador(String nombreJugador) {
+		this.nombreJugador = nombreJugador;
 	}
 	
 }

@@ -34,7 +34,7 @@ public class ClaseController {
 	
 	// Create a new Clase
 	@PostMapping("/clases")
-	public Clase createNote(@Valid @RequestBody Clase clase) {
+	public Clase createClase(@Valid @RequestBody Clase clase) {
 	    return claseRepository.save(clase);
 	}
 	
@@ -52,6 +52,8 @@ public class ClaseController {
 		Clase clase = claseRepository.findById(claseId)
 	            .orElseThrow(() -> new ResourceNotFoundException("Clase", "id", claseId));
 
+		clase.setNombre(claseDetails.getNombre());
+		
 	    Clase updatedClase = claseRepository.save(clase);
 	    return updatedClase;
 	}
