@@ -3,7 +3,7 @@ package com.luna.rdd.repository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import com.luna.rdd.Personaje;
+import com.luna.rdd.model.Personaje;
 
 @RepositoryRestResource
 public interface PersonajeRepository extends CrudRepository<Personaje, Long> {

@@ -44,7 +44,7 @@ public class FichaController {
 	    return fichaRepository.findById(fichaId).orElseThrow(() -> new ResourceNotFoundException("Ficha", "id", fichaId));
 	}
 	
-	// Update a Note
+	// Update a Ficha
 	@PutMapping("/fichas/{id}")
 	public Ficha updateNote(@PathVariable(value = "id") Long fichaId,
 	                                        @Valid @RequestBody Ficha fichaDetails) {
@@ -58,7 +58,7 @@ public class FichaController {
 	    return updatedFicha;
 	}
 	
-	// Delete a Note
+	// Delete a Ficha
 	@DeleteMapping("/fichas/{id}")
 	public ResponseEntity<?> deleteFicha(@PathVariable(value = "id") Long fichaId) {
 	    Ficha ficha = fichaRepository.findById(fichaId)
