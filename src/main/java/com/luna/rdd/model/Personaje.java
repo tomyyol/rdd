@@ -16,7 +16,7 @@ public class Personaje {
 	
 	@NotBlank
 	private String nombre;
-	private String descripcion;
+	private String trasfondo;
 	
 	@NotBlank
 	private String nombreJugador;
@@ -33,6 +33,16 @@ public class Personaje {
 	@ManyToOne
 	public Alineamiento alineamiento;
 	
+	private Long puntosExperiencia;
+	private Long puntosVidaTotales;
+	
+	private Long fuerza;
+	private Long destreza;
+	private Long constitucion;
+	private Long inteligencia;
+	private Long sabiduria;
+	private Long carisma;
+	
 	public Long getId() {
 		return id;
 	}
@@ -44,12 +54,6 @@ public class Personaje {
 	}
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-	public String getDescripcion() {
-		return descripcion;
-	}
-	public void setDescripcion(String descripcion) {
-		this.descripcion = descripcion;
 	}
 	public Long getNivel() {
 		return nivel;
@@ -80,6 +84,61 @@ public class Personaje {
 	}
 	public void setAlineamiento(Alineamiento alineamiento) {
 		this.alineamiento = alineamiento;
+	}
+	public Long getPuntosExperiencia() {
+		return puntosExperiencia;
+	}
+	public void setPuntosExperiencia(Long puntosExperiencia) {
+		this.puntosExperiencia = puntosExperiencia;
+	}
+	
+	public Long getPuntosVidaTotales() {
+		return puntosVidaTotales;
+	}
+	public void setPuntosVidaTotales(Long puntosVidaTotales) {
+		this.puntosVidaTotales = puntosVidaTotales;
+	}
+	public String getTrasfondo() {
+		return trasfondo;
+	}
+	public void setTrasfondo(String trasfondo) {
+		this.trasfondo = trasfondo;
+	}
+	public Long getFuerza() {
+		return fuerza;
+	}
+	public void setFuerza(Long fuerza) {
+		this.fuerza = fuerza;
+	}
+	public Long getDestreza() {
+		return destreza;
+	}
+	public void setDestreza(Long destreza) {
+		this.destreza = destreza;
+	}
+	public Long getConstitucion() {
+		return constitucion;
+	}
+	public void setConstitucion(Long constitucion) {
+		this.constitucion = constitucion;
+	}
+	public Long getInteligencia() {
+		return inteligencia;
+	}
+	public void setInteligencia(Long inteligencia) {
+		this.inteligencia = inteligencia;
+	}
+	public Long getSabiduria() {
+		return sabiduria;
+	}
+	public void setSabiduria(Long sabiduria) {
+		this.sabiduria = sabiduria;
+	}
+	public Long getCarisma() {
+		return carisma;
+	}
+	public void setCarisma(Long carisma) {
+		this.carisma = carisma;
 	}
 	
 }
