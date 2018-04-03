@@ -12,6 +12,7 @@ import javax.validation.constraints.NotBlank;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.luna.rdd.util.salvacion.TiradaSalvacion;
 
 @Entity
 @Table(name = "personajes")
@@ -150,5 +151,34 @@ public class Personaje {
 	public void setCarisma(Long carisma) {
 		this.carisma = carisma;
 	}
-	
+
+	public Long getTSFuerza() {
+		TiradaSalvacion ts = new TiradaSalvacion();
+		return ts.calculaTiradaSalvacion(this.fuerza);
+	}
+
+	public Long getTSDestreza() {
+		TiradaSalvacion ts = new TiradaSalvacion();
+		return ts.calculaTiradaSalvacion(this.destreza);
+	}
+
+	public Long getTSConstitucion() {
+		TiradaSalvacion ts = new TiradaSalvacion();
+		return ts.calculaTiradaSalvacion(this.constitucion);
+	}
+
+	public Long getTSInteligencia() {
+		TiradaSalvacion ts = new TiradaSalvacion();
+		return ts.calculaTiradaSalvacion(this.inteligencia);
+	}
+
+	public Long getTSSabiduria() {
+		TiradaSalvacion ts = new TiradaSalvacion();
+		return ts.calculaTiradaSalvacion(this.sabiduria);
+	}
+
+	public Long getTSCarisma() {
+		TiradaSalvacion ts = new TiradaSalvacion();
+		return ts.calculaTiradaSalvacion(this.carisma);
+	}
 }

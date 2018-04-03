@@ -82,4 +82,59 @@ public class PersonajeController {
 
 	    return ResponseEntity.ok().build();
 	}
+	
+	// Get a TS Fuerza Personaje
+	@GetMapping("/personajes/tsf/{id}")
+	public Long getTSFuerza(@PathVariable(value = "id") Long personajeId) {
+		Personaje personaje = personajeRepository.findById(personajeId)
+	            .orElseThrow(() -> new ResourceNotFoundException("Personaje", "id", personajeId));
+		
+		return personaje.getTSFuerza();
+	}
+
+	// Get a TS Destreza Personaje
+	@GetMapping("/personajes/tsd/{id}")
+	public Long getTSDestreza(@PathVariable(value = "id") Long personajeId) {
+		Personaje personaje = personajeRepository.findById(personajeId)
+	            .orElseThrow(() -> new ResourceNotFoundException("Personaje", "id", personajeId));
+		
+		return personaje.getTSDestreza();
+	}
+
+	// Get a TS Constitucion Personaje
+	@GetMapping("/personajes/tsco/{id}")
+	public Long getTSConstitucion(@PathVariable(value = "id") Long personajeId) {
+		Personaje personaje = personajeRepository.findById(personajeId)
+	            .orElseThrow(() -> new ResourceNotFoundException("Personaje", "id", personajeId));
+		
+		return personaje.getTSConstitucion();
+	}
+
+	// Get a TS Inteligencia Personaje
+	@GetMapping("/personajes/tsi/{id}")
+	public Long getTSInteligencia(@PathVariable(value = "id") Long personajeId) {
+		Personaje personaje = personajeRepository.findById(personajeId)
+	            .orElseThrow(() -> new ResourceNotFoundException("Personaje", "id", personajeId));
+		
+		return personaje.getTSInteligencia();
+	}
+
+	// Get a TS Sabiduria Personaje
+	@GetMapping("/personajes/tss/{id}")
+	public Long getTSSabiduria(@PathVariable(value = "id") Long personajeId) {
+		Personaje personaje = personajeRepository.findById(personajeId)
+	            .orElseThrow(() -> new ResourceNotFoundException("Personaje", "id", personajeId));
+		
+		return personaje.getTSSabiduria();
+	}
+
+	// Get a TS Carisma Personaje
+	@GetMapping("/personajes/tsca/{id}")
+	public Long getTSCarisma(@PathVariable(value = "id") Long personajeId) {
+		Personaje personaje = personajeRepository.findById(personajeId)
+	            .orElseThrow(() -> new ResourceNotFoundException("Personaje", "id", personajeId));
+		
+		return personaje.getTSCarisma();
+	}
+
 }
